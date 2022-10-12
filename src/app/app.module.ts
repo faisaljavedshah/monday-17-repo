@@ -33,7 +33,7 @@ import { CfaIntegrationsComponent } from './components/cfa-integrations/cfa-inte
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
-import { AthenaModule } from '@convirza/athena'
+// import { AthenaModule } from '@convirza/athena'
 import { environment } from '../environments/environment';
 import { AdministraterComponent } from './components/administrater/administrater.component';
 import { BelletireComponent } from './components/belletire/belletire.component'
@@ -91,10 +91,10 @@ import { MatSliderModule } from '@angular/material/slider';
     MatTabsModule,
     SharedModule,
     MatSliderModule,
-    AthenaModule.forRoot({
-      api_url: environment.cfaApiUrl,
-      internal_key: environment.cfaInternalKey
-    })
+    // AthenaModule.forRoot({
+    //   api_url: environment.cfaApiUrl,
+    //   internal_key: environment.cfaInternalKey
+    // })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true },

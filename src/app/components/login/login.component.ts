@@ -7,7 +7,7 @@ import {
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../../_services/index';
-import { AthenaService } from '@convirza/athena';
+// import { AthenaService } from '@convirza/athena';
 
 
 @Component({
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private authenticationService: AuthenticationService,
-    private athenaService: AthenaService
+    // private athenaService: AthenaService
   ) {
     let email = localStorage.getItem('email');
     let pass = localStorage.getItem('pass');
@@ -124,7 +124,7 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('adminInfo', JSON.stringify(data.data));
               this.router.navigate(['administrator']);
             }else{
-              this.athenaService.setAuthenticationTokens(data.data.user.cfa_access_token, data.data.user.cfa_refresh_token);
+              // this.athenaService.setAuthenticationTokens(data.data.user.cfa_access_token, data.data.user.cfa_refresh_token);
               // this.authenticationService.userInfo.next({userName : data.data.user.name, userImg : data.data.user.image})
               // console.log(data.data.user);
               let groups : Array<any> = data.data.groups;

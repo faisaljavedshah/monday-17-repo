@@ -26,15 +26,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@convirza/athena/assets/img",
-                "output": "/assets/img"
-              },
+
               "src/favicon.ico",
               "src/assets"],
             "styles": [
-              "node_modules/@convirza/athena/assets/css/custom-theme.scss",
+
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"

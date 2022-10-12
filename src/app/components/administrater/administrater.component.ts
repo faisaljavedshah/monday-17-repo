@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AthenaService } from '@convirza/athena';
+// import { AthenaService } from '@convirza/athena';
 import { AdministratorService } from 'src/app/_services/administrator.service';
 import { AuthenticationService } from 'src/app/_services/authentication.service';
 
@@ -19,7 +19,7 @@ export class AdministraterComponent implements OnInit {
   constructor(private admin : AdministratorService,
     private router: Router,
     private authenticationService: AuthenticationService,
-    private athenaService: AthenaService,
+    // private athenaService: AthenaService,
     private login : AuthenticationService) { }
   allGroups = [];
   ngOnInit(): void {
@@ -85,7 +85,7 @@ export class AdministraterComponent implements OnInit {
               });
         localStorage.setItem('groups', JSON.stringify(groups));
         localStorage.setItem('main_group',JSON.stringify(data.data?.main_group));
-        this.athenaService.setAuthenticationTokens(data.data.user.cfa_access_token, data.data.user.cfa_refresh_token);
+        // this.athenaService.setAuthenticationTokens(data.data.user.cfa_access_token, data.data.user.cfa_refresh_token);
         localStorage.setItem('token', data.data.access_token);
         localStorage.setItem('userInfo', JSON.stringify({name : data.data.user.name, logo : data.data.user.logo, img : data.data.user.image, status : data.data.user.status}));
         this.authenticationService.userInfo.next({name : data.data.user.name, logo : data.data.user.logo, img : data.data.user.image, status : data.data.user.status});
