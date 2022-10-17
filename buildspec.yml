@@ -12,10 +12,9 @@ phases:
     commands:
       - ng build
       
-      - zip -r nodejs.zip dist app.js package.json
+      - zip -r application.zip dist app.js package.json
       
 artifacts:
   files:
-      - nodejs.zip
-  discard-paths: no
-  base-directory: 'dist/admin-panel-layout'
+      - application.zip
+  
